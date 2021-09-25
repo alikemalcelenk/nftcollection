@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <HelloWorld msg="Home Page" />
+    <HelloWorld msg="Favorites Page" />
   </div>
 </template>
 

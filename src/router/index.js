@@ -6,6 +6,12 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/favorites',
+    name: 'Favorites',
+    component: () =>
+      import(/* webpackChunkName: "profile" */ '../views/Favorites')
   }
 ]
 
