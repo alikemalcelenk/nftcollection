@@ -1,12 +1,18 @@
 <template>
-  <div class="hello">
+  <Box class="hello">
     {{ msg }}
-  </div>
+  </Box>
 </template>
 
 <script>
+// elements
+import Box from './Elements/Box'
+
 export default {
   name: 'HelloWorld',
+  components: {
+    Box
+  },
   props: {
     msg: {
       type: String,
