@@ -4,6 +4,8 @@
     <IconFavoriteFill class="icon" />
     <IconLogo class="icon" />
     <TheLogo />
+    <Navigation />
+    <Navigation selected />
   </Box>
 </template>
 
@@ -15,7 +17,10 @@ import Box from './Elements/Box'
 import IconFavorite from './Icons/Favorite.vue'
 import IconFavoriteFill from './Icons/FavoriteFill.vue'
 import IconLogo from './Icons/Logo.vue'
+
+// components
 import TheLogo from './TheLogo.vue'
+import Navigation from './Navigation.vue'
 
 export default {
   name: 'HelloWorld',
@@ -24,7 +29,8 @@ export default {
     IconFavorite,
     IconFavoriteFill,
     IconLogo,
-    TheLogo
+    TheLogo,
+    Navigation
   },
   props: {
     msg: {
