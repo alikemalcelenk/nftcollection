@@ -1,6 +1,8 @@
 <template>
   <Box class="hello">
-    {{ msg }}
+    <IconFavorite class="icon" />
+    <IconFavoriteFill class="icon" />
+    <IconLogo class="icon" />
   </Box>
 </template>
 
@@ -8,11 +10,20 @@
 // elements
 import Box from './Elements/Box'
 
+// icons
+import IconFavorite from './Icons/Favorite.vue'
+import IconFavoriteFill from './Icons/FavoriteFill.vue'
+import IconLogo from './Icons/Logo.vue'
+
 export default {
   name: 'HelloWorld',
   components: {
-    Box
+    Box,
+    IconFavorite,
+    IconFavoriteFill,
+    IconLogo
   },
+
   props: {
     msg: {
       type: String,
@@ -29,5 +40,8 @@ export default {
   align-items: center;
   justify-content: center;
   height: 100vh;
+}
+.icon {
+  color: var(--c-blue);
 }
 </style>
