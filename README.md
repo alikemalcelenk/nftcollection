@@ -1,24 +1,32 @@
 # nftcollection
 
-## Project setup
+Example Project that is written in JavaScript using Vue, Vuex.
+
+## Installation and Setup Instructions
+
+#### Installation:
+
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+#### To start server:
+
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
-```
-yarn build
-```
+#### To visit app:
 
-### Lints and fixes files
-```
-yarn lint
-```
+`localhost:8080`
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Tech Stack
+
+- vue
+- vuex
+- eslint
+- prettier
+
+## Project Screenshot
+
+![Desktop Screenshot](/public/img/screenshot.png)
