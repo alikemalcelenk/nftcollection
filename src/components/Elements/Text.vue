@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'Span',
+  name: 'Text',
   props: {
     tag: {
       type: String,

@@ -3,6 +3,7 @@
     <IconFavorite class="icon" />
     <IconFavoriteFill class="icon" />
     <IconLogo class="icon" />
+    <TheLogo />
   </Box>
 </template>
 
@@ -14,6 +15,7 @@ import Box from './Elements/Box'
 import IconFavorite from './Icons/Favorite.vue'
 import IconFavoriteFill from './Icons/FavoriteFill.vue'
 import IconLogo from './Icons/Logo.vue'
+import TheLogo from './TheLogo.vue'
 
 export default {
   name: 'HelloWorld',
@@ -21,9 +23,9 @@ export default {
     Box,
     IconFavorite,
     IconFavoriteFill,
-    IconLogo
+    IconLogo,
+    TheLogo
   },
-
   props: {
     msg: {
       type: String,
