@@ -2,7 +2,7 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    likedNtfs: [],
+    likedNtfIds: [],
     nfts: [
       {
         id: 1,
@@ -64,10 +64,10 @@ export default createStore({
   },
   mutations: {
     addNftToLikedNfts(state, payload) {
-      state.likedNtfs.push(payload)
+      state.likedNtfIds.push(payload)
     },
     deleteNftFromLikedNfts(state, payload) {
-      state.likedNtfs.splice(state.likedNtfs.indexOf(payload), 1)
+      state.likedNtfIds.splice(state.likedNtfIds.indexOf(payload), 1)
     }
   },
   getters: {
@@ -75,7 +75,18 @@ export default createStore({
       return state.nfts
     },
     getLikedNfts(state) {
-      return state.likedNtfs
+      const likedNfts = []
+      state.nfts.forEach((nft) => {
+        state.likedNtfIds.forEach((likedNftId) => {
+          if (nft.id === likedNftId) {
+            likedNfts.push(nft)
+          }
+        })
+      })
+      return likedNfts
+    },
+    getLikedNftIds(state) {
+      return state.likedNtfIds
     }
   },
   modules: {}

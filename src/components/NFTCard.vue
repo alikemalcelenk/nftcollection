@@ -50,6 +50,7 @@ export default {
   },
   created: function () {
     this.isLikedFunc()
+    console.log(this.nft)
   },
   props: {
     nft: {
@@ -57,7 +58,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters({ likedNfts: 'getLikedNfts' })
+    ...mapGetters({ likedNftIds: 'getLikedNftIds' })
   },
   data: function () {
     return {
@@ -67,7 +68,7 @@ export default {
   methods: {
     ...mapActions(['likeNft', 'dislikeNft']),
     isLikedFunc: function () {
-      this.likedNfts.forEach((nftId) => {
+      this.likedNftIds.forEach((nftId) => {
         if (nftId === this.nft.id) {
           this.isLiked = true
         }

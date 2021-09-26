@@ -1,7 +1,7 @@
 <template>
   <TheLayout>
     <Header selectedPage="favorites" />
-    <Box> </Box>
+    <Content />
     <TheFooter />
   </TheLayout>
 </template>
@@ -10,9 +10,8 @@
 // components
 import TheLayout from '../components/TheLayout.vue'
 import Header from '../components/Header.vue'
+import Content from '../components/ContentFavorites.vue'
 import TheFooter from '../components/TheFooter.vue'
-
-import Box from '../components/Elements/Box.vue'
 
 export default {
   name: 'Favorites',
@@ -20,7 +19,7 @@ export default {
     TheLayout,
     Header,
     TheFooter,
-    Box
+    Content
   }
 }
 </script>
