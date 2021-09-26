@@ -1,20 +1,18 @@
 <template>
-  <Box>
-    <Button :class="'button' + (selected && ' selectedButton')"
-      >Favorites</Button
-    >
-  </Box>
+  <router-link to="/favorites" class="routerLink">
+    <Button :class="'button' + (selected && ' selectedButton')">
+      Favorites
+    </Button>
+  </router-link>
 </template>
 
 <script>
 // elements
-import Box from './Elements/Box'
-import Button from './Elements/Button'
+import Button from './Elements/Button.vue'
 
 export default {
   name: 'Navigation',
   components: {
-    Box,
     Button
   },
   props: {
@@ -27,9 +25,14 @@ export default {
 </script>
 
 <style scoped>
+.routerLink {
+  text-decoration: none;
+}
+
 .button {
   padding: 10px 25px 10px 25px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .selectedButton {
