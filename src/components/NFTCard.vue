@@ -110,5 +110,6 @@ export default {
 }
 .favoriteIcon {
   color: var(--c-blue);
+  cursor: pointer;
 }
 </style>
