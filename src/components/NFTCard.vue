@@ -35,6 +35,9 @@ import Button from './Elements/Button'
 import IconFavorite from './Icons/Favorite.vue'
 import IconFavoriteFill from './Icons/FavoriteFill.vue'
 
+// vuex
+import { mapActions, mapGetters } from 'vuex'
+
 export default {
   name: 'NFTCard',
   components: {
@@ -45,23 +48,39 @@ export default {
     IconFavorite,
     IconFavoriteFill
   },
+  created: function () {
+    this.isLikedFunc()
+  },
   props: {
-    liked: {
-      type: Boolean,
-      default: false
-    },
     nft: {
       type: Object
     }
   },
+  computed: {
+    ...mapGetters({ likedNfts: 'getLikedNfts' })
+  },
   data: function () {
     return {
-      isLiked: this.liked
+      isLiked: false
     }
   },
   methods: {
+    ...mapActions(['likeNft', 'dislikeNft']),
+    isLikedFunc: function () {
+      this.likedNfts.forEach((nftId) => {
+        if (nftId === this.nft.id) {
+          this.isLiked = true
+        }
+      })
+    },
     like: function () {
-      this.isLiked = !this.isLiked
+      if (this.isLiked) {
+        this.dislikeNft(this.nft.id)
+        this.isLiked = false
+      } else {
+        this.likeNft(this.nft.id)
+        this.isLiked = true
+      }
     }
   }
 }

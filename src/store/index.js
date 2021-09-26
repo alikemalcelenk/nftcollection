@@ -54,11 +54,28 @@ export default createStore({
       }
     ]
   },
-  mutations: {},
-  actions: {},
+  actions: {
+    likeNft({ commit }, nftId) {
+      commit('addNftToLikedNfts', nftId)
+    },
+    dislikeNft({ commit }, nftId) {
+      commit('deleteNftFromLikedNfts', nftId)
+    }
+  },
+  mutations: {
+    addNftToLikedNfts(state, payload) {
+      state.likedNtfs.push(payload)
+    },
+    deleteNftFromLikedNfts(state, payload) {
+      state.likedNtfs.splice(state.likedNtfs.indexOf(payload), 1)
+    }
+  },
   getters: {
     getNfts(state) {
       return state.nfts
+    },
+    getLikedNfts(state) {
+      return state.likedNtfs
     }
   },
   modules: {}
