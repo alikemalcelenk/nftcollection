@@ -39,6 +39,8 @@ export default {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  margin: 0px 40px 0px 40px;
+  padding: 0px 40px 0px 40px;
+  background-color: var(--c-white);
+  border-bottom: 1px solid var(--c-soft-gray);
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
   <TheLayout>
     <Header />
-    <Box style="background-color: blue"> </Box>
-    <Box style="background-color: green"> </Box>
+    <Box> </Box>
+    <TheFooter />
   </TheLayout>
 </template>
 
@@ -10,6 +10,7 @@
 // components
 import TheLayout from '../components/TheLayout.vue'
 import Header from '../components/Header.vue'
+import TheFooter from '../components/TheFooter.vue'
 
 import Box from '../components/Elements/Box.vue'
 
@@ -18,6 +19,7 @@ export default {
   components: {
     TheLayout,
     Header,
+    TheFooter,
     Box
   }
 }
