@@ -1,17 +1,21 @@
 <template>
-  <div class="home">
-    <HelloWorld msg="Favorites Page" />
-  </div>
+  <TheLayout>
+    <Box style="background-color: gray"> </Box>
+    <Box style="background-color: blue"> </Box>
+    <Box style="background-color: green"> </Box>
+  </TheLayout>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+// components
+import TheLayout from '../components/TheLayout.vue'
+import Box from '../components/Elements/Box.vue'
 
 export default {
-  name: 'Home',
+  name: 'Favorites',
   components: {
-    HelloWorld
+    TheLayout,
+    Box
   }
 }
 </script>

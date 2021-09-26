@@ -1,5 +1,5 @@
 <template>
-  <Box class="hello">
+  <Box class="root">
     <IconFavorite class="icon" />
     <IconFavoriteFill class="icon" />
     <IconLogo class="icon" />
@@ -58,7 +58,7 @@ export default {
 </script>
 
 <style scoped>
-.hello {
+.root {
   display: flex;
   align-items: center;
   justify-content: center;
